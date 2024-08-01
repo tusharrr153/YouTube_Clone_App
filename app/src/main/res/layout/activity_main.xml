@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomnav"
+        />
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/bottomnav"
+        app:dividerColor="#2B2B2B"
+
+        />
+    <LinearLayout
+        android:id="@+id/bottomnav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:id="@+id/iconhome"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.2"
+            >
+
+            <ImageView
+                android:id="@+id/homeimage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/homeselected" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:text="Home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/shortsicon"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0.2"
+            >
+
+            <ImageView
+                android:id="@+id/shortsimage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/shortsselected" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:text="Shorts" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addicon"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0.2"
+            >
+
+            <ImageView
+                android:id="@+id/addimage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                app:srcCompat="@drawable/addselected" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/subscriptionicon"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0.2"
+            >
+
+            <ImageView
+                android:id="@+id/subscriptionimage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/subselected" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:text="Subscription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profileicon"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0.2"
+            >
+
+            <ImageView
+                android:id="@+id/profileimage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/profileselected" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:text="You" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

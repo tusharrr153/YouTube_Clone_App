@@ -1,0 +1,260 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".VideoPlayActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:use_controller="true"
+        app:resize_mode="fill" />
+
+    <TextView
+        android:id="@+id/tvCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:text="Video Caption"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+      >
+      <TextView
+          android:id="@+id/totalview"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingStart="16dp"
+          android:text="1,000 viewa"
+          android:textSize="14sp"
+          android:textColor="@android:color/darker_gray" />
+
+      <TextView
+          android:id="@+id/tvUploadTime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingStart="10dp"
+          android:text="3 hr ago"
+          android:textSize="14sp"
+          android:textColor="@android:color/darker_gray" />
+      <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingStart="10dp"
+          android:text="...more"
+          android:textSize="14sp"
+          android:textColor="@color/white" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/youtuberdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+      <ImageView
+          android:id="@+id/ivProfilePicture"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:src="@drawable/profile"
+          android:layout_marginEnd="16dp"
+          android:scaleType="centerCrop"
+          android:background="?android:attr/selectableItemBackgroundBorderless"
+          android:contentDescription="Profile Picture" />
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:layout_gravity="center_vertical"
+          android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvYoutuberName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YouTuber"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSubscriberCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 lakh"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/darker_gray" />
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/btnSubscribe"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:text="Subscribe"
+          android:background="@drawable/bgsub"
+          android:paddingStart="16dp"
+          android:paddingEnd="16dp"
+          android:textAllCaps="false"
+          android:textColor="@android:color/black"
+
+          />
+    </LinearLayout>
+    <HorizontalScrollView
+        android:id="@+id/horizontalscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear1"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+
+          android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/likeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Like"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:drawableLeft="@drawable/like2"
+            android:background="@drawable/bgprofile"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            />
+        <TextView
+            android:id="@+id/dislikeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Dislike"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:drawableLeft="@drawable/dislike"
+            android:background="@drawable/bgprofile"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Share"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@drawable/share2"
+            android:background="@drawable/bgprofile"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Remix"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@drawable/remix2"
+            android:background="@drawable/bgprofile"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Download"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@drawable/download2"
+            android:background="@drawable/bgprofile"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Clip"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@drawable/scissor"
+            android:background="@drawable/bgprofile"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Save"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@drawable/save"
+            android:background="@drawable/bgprofile"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Report"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@drawable/report"
+            android:background="@drawable/bgprofile"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            />
+      </LinearLayout>
+    </HorizontalScrollView>
+  </LinearLayout>
+</ScrollView>

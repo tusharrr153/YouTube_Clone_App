@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/black"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sheetcurva"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/cancel_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/_200sdp"
+            android:src="@drawable/cross" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createashort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shortsnotselected"
+            android:background="@drawable/bgvideo"
+            android:padding="10dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a Short"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/uploadavideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgvideo"
+            android:padding="10dp"
+            android:src="@drawable/upload" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload a video"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/golive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgvideo"
+            android:padding="10dp"
+            android:src="@drawable/livestreaming" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go live"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,144 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/videoThumbnail"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/video_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:padding="2sp"
+        android:background="@drawable/bgtime"
+        app:layout_constraintBottom_toBottomOf="@+id/videoThumbnail"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        />
+    <LinearLayout
+        android:id="@+id/user_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoThumbnail">
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="10dp"
+            android:src="@color/gray" />
+
+        <LinearLayout
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/videoCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                tools:text="captain" />
+
+       <!--     <TextView
+                android:id="@+id/username_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="Hey this is first video" /> -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/username_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#B5B5B5"
+                    android:text="jigeshvaity8457"
+                    tools:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:textColor="#FFFFFF"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="." />
+
+                <TextView
+                    android:id="@+id/totalview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="3dp"
+                    android:textColor="#B5B5B5"
+                    android:textSize="13sp"
+                    android:text="100 views" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:textColor="#FFFFFF"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="." />
+
+                <TextView
+                    android:id="@+id/uploadtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:layout_marginStart="2dp"
+                    android:textColor="#B5B5B5"
+                    android:text="1 hour ago" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/dotsthreevertical" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

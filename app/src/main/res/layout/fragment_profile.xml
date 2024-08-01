@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ProfileFragment">
+
+    <include
+        android:id="@+id/menu"
+        layout="@layout/menu_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon_account_circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="jigesh vaity"
+                android:textSize="27dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:textColor="#FFFFFF"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/username_gmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="jigeshvaity8457"
+                    tools:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:textColor="#FFFFFF"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="." />
+
+                <TextView
+                    android:id="@+id/viewchannel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:textColor="#B5B5B5"
+                    android:text="View channel >" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear1"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Switch Account"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:drawableLeft="@drawable/switchuser"
+                android:background="@drawable/bgprofile"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Google Account"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginStart="10dp"
+                android:drawableLeft="@drawable/google"
+                android:background="@drawable/bgprofile"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Turn on Incognito"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginStart="10dp"
+                android:drawableLeft="@drawable/incognito"
+                android:background="@drawable/bgprofile"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/horizontalscrollview">
+
+        <TextView
+            android:id="@+id/historyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History"
+            tools:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View all"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/bgview"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/constraintLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Playlists"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/viewall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View all"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/bgview"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/yourvideos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/constraintLayout2"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:src="@drawable/video" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your videos"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginStart="35dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yourvideos"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="25dp"
+        >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:src="@drawable/download" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Downloads"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginStart="35dp"
+            />
+
+    </LinearLayout>
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/linear3"
+        app:dividerColor="#393838"
+        />
+    <LinearLayout
+        android:id="@+id/linear4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear3"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:src="@drawable/movie" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your movie"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginStart="35dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear4"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="25dp"
+        >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:src="@drawable/youtube1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get YouTube Premium"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginStart="35dp"
+            />
+
+    </LinearLayout>
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+
+        android:layout_below="@id/linear5"
+        app:dividerColor="#393838"
+
+        />
+    <LinearLayout
+        android:id="@+id/linear6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear5"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:src="@drawable/graph" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time watched"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginStart="35dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear6"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+
+        >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:src="@drawable/help" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help and feedback"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginStart="35dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

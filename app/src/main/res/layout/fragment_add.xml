@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".AddFragment">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:scrollbars="none"
+        android:layout_alignParentBottom="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingStart="80dp"
+            android:paddingEnd="80dp">
+
+            <TextView
+                android:id="@+id/text_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/text_shorts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shorts"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/text_live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/text_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:padding="10dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+</RelativeLayout>

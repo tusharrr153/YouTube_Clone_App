@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".ViewChannelFragment">
+
+    <include
+        android:id="@+id/menu"
+        layout="@layout/menu_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon_account_circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="jigesh vaity"
+                android:textSize="27dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                tools:textColor="#FFFFFF"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/username_gmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="jigeshvaity8457"
+                    tools:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:textColor="#FFFFFF"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="." />
+
+                <TextView
+                    android:id="@+id/viewchannel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:textColor="#B5B5B5"
+                    android:text="View channel >" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear1"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:text="Manage videos"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:background="@drawable/bgprofile"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/graph"
+                android:background="@drawable/bgprofile"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingEnd="9dp"
+                android:layout_gravity="center"
+                android:paddingStart="9dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/pencil"
+                android:background="@drawable/bgprofile"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingEnd="10dp"
+                android:layout_gravity="center"
+                android:paddingStart="10dp"
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/linea2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/horizontalscrollview"
+        android:layout_marginTop="25dp">
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:text="Home" />
+
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="20dp"
+            android:textColor="#B5B5B5"
+            android:textStyle="bold"
+            android:text="Playlists" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:dividerColor="#2B2B2B"
+        android:layout_below="@+id/linea2"
+        android:layout_marginTop="10dp"
+        />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/v" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_350sdp"
+        android:textColor="@color/white"
+        android:text="Create content on any device" />
+
+    <TextView
+        android:id="@+id/textv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="Uplpoad and record at gome or on the go.\n Everything that you make public will appear here." />
+
+    <Button
+        android:id="@+id/create"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Create"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:paddingTop="5dp"
+        android:layout_below="@id/textv"
+        android:paddingBottom="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/bgsub"
+        />
+
+</RelativeLayout>

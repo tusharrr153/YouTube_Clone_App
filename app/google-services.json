@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "970817261520",
+    "project_id": "clone-7a381",
+    "storage_bucket": "clone-7a381.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970817261520:android:4e7115ee96e0b61dd6f3d5",
+        "android_client_info": {
+          "package_name": "com.example.jigesh.youtubeclone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeRmR6jEVCEXSxoUC3ssFILVumeB9OIpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
